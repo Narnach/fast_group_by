@@ -3,6 +3,8 @@
 An unordered group_by implementation that is a gazillion times faster than
 ActiveSupport's ordered version. This becomes apparent when used with large data sets.
 
+The above holds true for ActiveSupport 2.2.x, but a benchmark for ActiveSupport 2.3.2 shows that fast_group_by got 75% slower when compared to 2.2.x. Performance of group_by was increased significantly and is on-par with fast_group_by.
+
 == How to install
 
 Once the gem appears on gems.github.com, you can install it with:
