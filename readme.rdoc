@@ -3,7 +3,27 @@
 An unordered group_by implementation that is a gazillion times faster than
 ActiveSupport's ordered version. This becomes apparent when used with large data sets.
 
+== ActiveSupport 2.2.x vs 2.3.x
+
 The above holds true for ActiveSupport 2.2.x, but a benchmark for ActiveSupport 2.3.2 shows that fast_group_by got 75% slower when compared to 2.2.x. Performance of group_by was increased significantly and is on-par with fast_group_by.
+
+=== The speedup
+
+The commit that caused the ActiveSupport speedup is: 
+
+  commit 355f41d8aafd75d76db25cdda4736e0052b0605c
+  Author: Frederick Cheung <frederick.cheung@gmail.com>
+  Date:   Tue Dec 9 20:36:24 2008 +0000
+
+      Rework ActiveSupport::OrderedHash to make lookups faster
+    
+      [#1352 state:committed]
+    
+      Signed-off-by: Jeremy Kemper <jeremy@bitsweat.net>
+    
+This new version is how I would implement an OrderedHash as well: OrderedHash inherits from Hash and keeps track of the key insertion order in an internal Array.
+
+This still does not explain where the slowdown comes from, though. That's for a next benchmark.
 
 == How to install
 
