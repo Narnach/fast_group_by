@@ -9,7 +9,7 @@ The above holds true for ActiveSupport 2.2.x, but a benchmark for ActiveSupport 
 
 === The speedup
 
-The commit that caused the ActiveSupport speedup is: 
+Using git bisect on the rails source (see examples/bench.sh), discovered the commit that caused the ActiveSupport speedup:
 
   commit 355f41d8aafd75d76db25cdda4736e0052b0605c
   Author: Frederick Cheung <frederick.cheung@gmail.com>
