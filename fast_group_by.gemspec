@@ -11,17 +11,13 @@ Gem::Specification.new do |s|
   s.homepage     = "http://www.github.com/Narnach/fast_group_by"
 
   # Files
-  root_files     = %w[readme.rdoc Rakefile fast_group_by.gemspec]
-  bin_files      = []
+  root_files     = %w[readme.rdoc]
   lib_files      = %w[fast_group_by]
-  test_files     = %w[]
-  spec_files     = %w[fast_group_by]
-  other_files    = %w[]
-  s.bindir       = "bin"
+  s.bindir       = nil
   s.require_path = "lib"
-  s.executables  = bin_files
-  s.test_files   = test_files.map {|f| 'test/%s_test.rb' % f} + spec_files.map {|f| 'spec/%s_spec.rb' % f}
-  s.files        = root_files + s.test_files + other_files + bin_files.map {|f| 'bin/%s' % f} + lib_files.map {|f| 'lib/%s.rb' % f}
+  s.executables  = %w[]
+  s.test_files   = %w[]
+  s.files        = root_files + lib_files.map {|f| 'lib/%s.rb' % f}
 
   # rdoc
   s.has_rdoc         = true
