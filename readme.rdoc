@@ -5,10 +5,13 @@ the ordered version used in ActiveSupport version 2.2.x. This becomes apparent w
 
 == How to install
 
-Once the gem appears on gems.github.com, you can install it with:
+When you have setup http://gemcutter.org as a gem source, you can install it with:
+  sudo gem install fast_group_by
+
+When you have setup http://gems.github.com as a gem source, you can install it with:
   sudo gem install Narnach-fast_group_by
 
-The alternative is to clone the git repo and build the gem yourself:
+If you want tests, benchmarks and the project's history, you can clone the git repo and build the gem yourself:
   git clone git://github.com/Narnach/fast_group_by.git
   cd fast_group_by
   rake install
