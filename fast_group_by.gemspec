@@ -3,8 +3,8 @@ Gem::Specification.new do |s|
   s.name         = 'fast_group_by'
   s.summary      = "Fast group_by is an Enumerable#group_by implementation that uses hash instead of OrderedHash and is thus faster, but not ordered."
   s.description  = s.summary
-  s.version      = '0.1.0'
-  s.date         = '2009-07-16'
+  s.version      = '0.1.1'
+  s.date         = '2009-09-11'
   s.platform     = Gem::Platform::RUBY
   s.authors      = ["Wes Oldenbeuving"]
   s.email        = "narnach@gmail.com"
